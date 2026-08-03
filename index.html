@@ -153,6 +153,26 @@
     color: var(--muted);
     margin-top: 24px;
   }
+  .footer-links {
+    display: flex;
+    gap: 20px;
+    margin: 0 0 14px;
+  }
+  .footer-links a {
+    color: var(--muted);
+    font-size: 14px;
+    text-decoration: none;
+  }
+  .footer-links a:hover {
+    color: var(--ink);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .footer-copy {
+    font-size: 13px;
+    color: var(--muted);
+    margin: 0;
+  }
 
   /* Demo video — swap the src attribute on the <video> tag above for
      your actual video file/URL. */
@@ -272,7 +292,45 @@
   <img class="shot" src="provider.png" alt="Midsomar Desktop, Providers screen, showing Anthropic, GitHub Copilot, OpenAI, Google, and OpenRouter as connectable providers">
   <p class="caption">Midsomar Desktop — Providers</p>
 
-  <footer>Midsomar Inc</footer>
+  <h2>Use cases</h2>
+  <div class="benefits-grid">
+    <div class="benefit">
+      <h3>Bug triage &amp; fixes</h3>
+      <p>Point the agent at a failing test or stack trace and have it trace the issue through your codebase and patch it.</p>
+    </div>
+    <div class="benefit">
+      <h3>Large refactors</h3>
+      <p>Rename APIs, migrate frameworks, or restructure modules across dozens of files in one guided pass.</p>
+    </div>
+    <div class="benefit">
+      <h3>Codebase Q&amp;A</h3>
+      <p>Ask how a system works or where a behavior lives and get an answer grounded in your actual source, not guesses.</p>
+    </div>
+    <div class="benefit">
+      <h3>Test generation</h3>
+      <p>Generate unit and integration tests for existing code, including edge cases you hadn't written yet.</p>
+    </div>
+    <div class="benefit">
+      <h3>Onboarding</h3>
+      <p>New teammates can explore an unfamiliar repo by asking the agent directly instead of reading it cold.</p>
+    </div>
+    <div class="benefit">
+      <h3>Local automation</h3>
+      <p>Script routine chores — dependency bumps, changelogs, boilerplate — as agent tasks you run from the CLI.</p>
+    </div>
+  </div>
+
+  <hr>
+
+  <footer>
+    <div class="footer-links">
+      <a href="#">Docs</a>
+      <a href="#">GitHub</a>
+      <a href="#">Discord</a>
+      <a href="#">Privacy</a>
+    </div>
+    <p class="footer-copy">&copy; 2026 Midsomar Inc. All rights reserved.</p>
+  </footer>
 
 </div>
 
