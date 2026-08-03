@@ -167,64 +167,33 @@
     margin: 8px 0 26px;
   }
 
-  .pricing-card {
-    border: 1px solid var(--rule);
-    border-radius: 8px;
-    padding: 32px 36px;
+  /* Benefits grid */
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-top: 1px solid var(--rule);
+    border-left: 1px solid var(--rule);
     margin: 0 0 26px;
   }
-  .price {
-    font-size: 44px;
+  @media (max-width: 480px) {
+    .benefits-grid { grid-template-columns: 1fr; }
+  }
+  .benefit {
+    border-right: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    padding: 18px 20px;
+  }
+  .benefit h3 {
+    font-size: 17px;
     font-weight: 700;
+    margin: 0 0 6px;
     letter-spacing: -0.01em;
-    margin: 4px 0 6px;
-    line-height: 1.1;
   }
-  .price-period {
-    font-size: 18px;
-    font-weight: 400;
+  .benefit p {
+    font-size: 15px;
+    line-height: 1.55;
     color: var(--muted);
-  }
-  .price-sub {
-    font-size: 16px;
-    margin: 0 0 24px;
-  }
-  .whats-included {
-    font-weight: 700;
-    font-size: 16px;
-    margin: 0 0 10px;
-    padding-top: 12px;
-    border-top: 1px solid var(--rule);
-  }
-  .pricing-card ul {
-    margin: 0 0 24px;
-  }
-  .pricing-card li {
-    font-size: 16px;
-  }
-  .pricing-cta {
-    display: flex;
-    gap: 12px;
-  }
-  .btn-primary {
-    font-family: inherit;
-    font-size: 15px;
-    background: var(--ink);
-    color: var(--bg);
-    border: none;
-    padding: 10px 18px;
-    border-radius: 6px;
-    cursor: pointer;
-  }
-  .btn-secondary {
-    font-family: inherit;
-    font-size: 15px;
-    background: transparent;
-    color: var(--ink);
-    border: 1px solid var(--rule);
-    padding: 10px 18px;
-    border-radius: 6px;
-    cursor: pointer;
+    margin: 0;
   }
 </style>
 </head>
@@ -265,6 +234,34 @@
     offline-friendly and keeps your code where it already lives.
   </div>
 
+  <h2>Why Midsomar</h2>
+  <div class="benefits-grid">
+    <div class="benefit">
+      <h3>Local-first &amp; private</h3>
+      <p>Your code stays on your machine. No cloud sandbox, no upload step, nothing leaves your filesystem unless you say so.</p>
+    </div>
+    <div class="benefit">
+      <h3>Model-agnostic</h3>
+      <p>Bring your own model. Connect Anthropic, OpenAI, Google, GitHub Copilot, OpenRouter, or any OpenAI-compatible endpoint.</p>
+    </div>
+    <div class="benefit">
+      <h3>Zero-config start</h3>
+      <p>One install command, one run command, and the agent is live in your browser pointed at your current project.</p>
+    </div>
+    <div class="benefit">
+      <h3>Unlimited seats</h3>
+      <p>One flat price covers your whole team — no per-seat billing as headcount grows.</p>
+    </div>
+    <div class="benefit">
+      <h3>Team workspaces</h3>
+      <p>Organize projects and people into shared workspaces with centralized API key management.</p>
+    </div>
+    <div class="benefit">
+      <h3>Full audit logs</h3>
+      <p>Every agent action is logged, so you can review what changed, when, and by which run.</p>
+    </div>
+  </div>
+
   <h2>Providers</h2>
   <p>
     Midsomar isn't tied to one model. Open the desktop app's Providers
@@ -274,8 +271,6 @@
   </p>
   <img class="shot" src="provider.png" alt="Midsomar Desktop, Providers screen, showing Anthropic, GitHub Copilot, OpenAI, Google, and OpenRouter as connectable providers">
   <p class="caption">Midsomar Desktop — Providers</p>
-
-  <hr>
 
   <footer>Midsomar Inc</footer>
 
